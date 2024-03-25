@@ -14,19 +14,19 @@ import (
 func main() {
 	fmt.Print("\033[H\033[2J")
 
-	entries, err := os.ReadDir("./resources/fundamental")
+	fundamentalEntries, err := os.ReadDir("./resources/fundamental")
 
 	if err == nil {
 		utils.LineBreak()
-
-		var paths []string
-		for _, entry := range entries {
-			paths = append(paths, cases.Title(language.Und, cases.NoLower).String(strings.Split(strings.ReplaceAll(entry.Name(), ".go", ""), " - ")[1]))
-		}
-
 		fmt.Println("Learning Path")
 		fmt.Println()
-		for index, path := range paths {
+
+		var fundamentalPaths []string
+		for _, entry := range fundamentalEntries {
+			fundamentalPaths = append(fundamentalPaths, cases.Title(language.Und, cases.NoLower).String(strings.Split(strings.ReplaceAll(entry.Name(), ".go", ""), " - ")[1]))
+		}
+		fmt.Println("Fundamental :")
+		for index, path := range fundamentalPaths {
 			fmt.Printf("[%02d] %s\n", index, path)
 		}
 
