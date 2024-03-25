@@ -80,6 +80,8 @@ func main() {
 			fundamental.FunctionRecursive()
 		case 20:
 			fundamental.Struct()
+		case 21:
+			fundamental.Map()
 		default:
 			fmt.Println("")
 		}
