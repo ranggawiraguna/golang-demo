@@ -78,6 +78,8 @@ func main() {
 			fundamental.FunctionReturn()
 		case 19:
 			fundamental.FunctionRecursive()
+		case 20:
+			fundamental.Struct()
 		default:
 			fmt.Println("")
 		}
