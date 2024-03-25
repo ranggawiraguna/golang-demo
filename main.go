@@ -74,6 +74,8 @@ func main() {
 			fundamental.Loop()
 		case 17:
 			fundamental.Function()
+		case 18:
+			fundamental.FunctionReturn()
 		default:
 			fmt.Println("")
 		}

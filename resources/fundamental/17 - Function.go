@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func sayGreeting() {
+func printSayGreeting() {
 	hour := time.Now().Hour()
 	if hour >= 5 && hour < 10 {
 		fmt.Println("Hi, Good Morning!")
@@ -20,19 +20,19 @@ func sayGreeting() {
 	}
 }
 
-func getScoreGrade(name string, score int) {
-	fmt.Printf("Your Name\t: %s\n", name)
-	fmt.Printf("Your Value\t: %d\n", score)
+func printScoreGrade(name string, score int) {
+	fmt.Printf("Name\t: %s\n", name)
+	fmt.Printf("Value\t: %d\n", score)
 	if score >= 80 && score <= 100 {
-		fmt.Println("Your Grade\t: A")
+		fmt.Println("Grade\t: A")
 	} else if score >= 68 && score <= 79 {
-		fmt.Println("Your Grade\t: B")
+		fmt.Println("Grade\t: B")
 	} else if score >= 50 && score <= 67 {
-		fmt.Println("Your Grade\t: C")
+		fmt.Println("Grade\t: C")
 	} else if score >= 40 && score <= 49 {
-		fmt.Println("Your Grade\t: D")
+		fmt.Println("Grade\t: D")
 	} else {
-		fmt.Println("Your Grade\t: E")
+		fmt.Println("Grade\t: E")
 	}
 }
 
@@ -40,7 +40,7 @@ func Function() {
 	utils.LineBreak()
 	fmt.Println("Basic Function")
 	fmt.Println("")
-	sayGreeting()
+	printSayGreeting()
 	utils.LineBreak()
 
 	utils.LineBreak()
@@ -48,6 +48,6 @@ func Function() {
 	fmt.Println("")
 	name := "Rangga"
 	score := rand.Intn(101)
-	getScoreGrade(name, score)
+	printScoreGrade(name, score)
 	utils.LineBreak()
 }
