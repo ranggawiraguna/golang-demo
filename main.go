@@ -72,6 +72,8 @@ func main() {
 			fundamental.Switch()
 		case 16:
 			fundamental.Loop()
+		case 17:
+			fundamental.Function()
 		default:
 			fmt.Println("")
 		}
