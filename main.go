@@ -14,7 +14,7 @@ import (
 func main() {
 	fmt.Print("\033[H\033[2J")
 
-	entries, err := os.ReadDir("./resources")
+	entries, err := os.ReadDir("./resources/fundamental")
 
 	if err == nil {
 		utils.LineBreak()
@@ -27,7 +27,7 @@ func main() {
 		fmt.Println("Learning Path")
 		fmt.Println()
 		for index, path := range paths {
-			fmt.Printf("[%d] %s\n", index, path)
+			fmt.Printf("[%02d] %s\n", index, path)
 		}
 
 		var selectedNumber int
