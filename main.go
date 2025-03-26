@@ -23,8 +23,7 @@ func main() {
 
 		var fundamentalPaths []string
 		for _, entry := range fundamentalEntries {
-			pathSplit := strings.Split(strings.ReplaceAll(entry.Name(), ".go", ""), " - ")
-			if len(pathSplit) == 2 {
+			if strings.Contains(entry.Name(), "go") {
 				fundamentalPaths = append(fundamentalPaths, cases.Title(language.Und, cases.NoLower).String(strings.Split(strings.ReplaceAll(entry.Name(), ".go", ""), " - ")[1]))
 			}
 		}
