@@ -23,7 +23,10 @@ func main() {
 
 		var fundamentalPaths []string
 		for _, entry := range fundamentalEntries {
-			fundamentalPaths = append(fundamentalPaths, cases.Title(language.Und, cases.NoLower).String(strings.Split(strings.ReplaceAll(entry.Name(), ".go", ""), " - ")[1]))
+			pathSplit := strings.Split(strings.ReplaceAll(entry.Name(), ".go", ""), " - ")
+			if len(pathSplit) == 2 {
+				fundamentalPaths = append(fundamentalPaths, cases.Title(language.Und, cases.NoLower).String(strings.Split(strings.ReplaceAll(entry.Name(), ".go", ""), " - ")[1]))
+			}
 		}
 		fmt.Println("Fundamental :")
 		for index, path := range fundamentalPaths {
